@@ -1,0 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['id'])){
+    header('Location:loginform.php');
+}
+else{
+    session_destroy();
+    header('Location:loginform.php');
+}
